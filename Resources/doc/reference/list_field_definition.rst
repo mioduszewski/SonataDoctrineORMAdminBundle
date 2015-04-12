@@ -31,7 +31,7 @@ Example
             $listMapper
                 ->addIdentifier('title')
                 ->add('author')
-                ->add('enabled')
+                ->add('enabled', null, array('editable' => true'))
                 ->add('tags')
                 ->add('commentsEnabled')
 
@@ -100,6 +100,10 @@ You can specify your own by setting up the 'template' option like so:
             'delete' => array('template' => 'MyBundle:MyController:my_partial.html.twig'),
         )
     ))
+
+Inline-edit
+-----------
+You can enable inline-edit on setting ``editable`` to ``true`` in Field Definition Options.
 
 Advance Usage
 -------------
